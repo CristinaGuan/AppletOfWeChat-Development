@@ -25,7 +25,7 @@ Page({
      var postId=options.id;
      this.dbPost=new DBPost(postId);
      var comments=this.dbPost.getCommentData();
-     console.log(comments);
+    //  console.log(comments);
 
      //绑定评论数据
      this.setData({
@@ -108,7 +108,7 @@ Page({
   //input触发事件
   bindCommentInput:function(event){
      var val=event.detail.value;
-     console.log(val);
+    //  console.log(val);
      //屏蔽关键字
     //  var pos=event.detail.cursor;
     //  if(pos!=-1){
@@ -200,7 +200,7 @@ Page({
      //获取--选择的是哪一张传图方式
      var sourceType=[event.currentTarget.dataset.category],
      that=this;
-     console.log(sourceType);
+    //  console.log(sourceType);
      wx.chooseImage({
        count: leftCount,
        sourceType: sourceType,
@@ -220,7 +220,7 @@ Page({
    that.setData({
      deleteIndex:index
    });
-   console.log(index);
+  //  console.log(index);
    that.data.chooseFiles.splice(index,1);
    //setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。
    setTimeout(function(){

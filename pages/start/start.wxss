@@ -1,0 +1,27 @@
+/* pages/start/start.wxss */
+.container{
+  padding: 0;
+  margin: 0;
+}
+.swiperClass{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.swiper-items{
+
+}
+.swiper-image{
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.swiper-button{
+  position: relative;
+  bottom: 90px;
+  height: 40px;
+  width: 120px;
+  opacity: 0.7;
+}

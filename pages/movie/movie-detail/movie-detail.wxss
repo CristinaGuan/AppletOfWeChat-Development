@@ -1,0 +1,160 @@
+/* pages/movie/movie-detail/movie-detail.wxss */
+
+@import "../stars/stars-tpl.wxss";
+
+.container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.topblock{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110rpx;
+}
+.head-img{
+  width: 100%;
+  height: 320rpx;
+  -webkit-filter: blur(20px);
+   position: absolute;
+  top: 0;
+  left: 0; 
+  /* margin-bottom: 20rpx; */
+}
+
+.head-img-hover{
+  width:100%;
+  height: 320rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+}
+
+.main-title{
+  font-size: 19px;
+  color:#000;
+  font-weight: bold;
+  margin-top: 50rpx;
+  letter-spacing: 2px;
+}
+.sub-title{
+  font-size: 28rpx;
+  color:#000;
+  margin-top: 30rpx;
+}
+.like{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+.hightlight-font{
+  color:#f21146;
+  font-size: 22rpx;
+  line-height: 1em;
+  margin-right: 15rpx;
+}
+
+.plain-font{
+  color:#000;
+  font-size: 22rpx;
+  line-height: 1em;
+  margin-right: 30rpx;
+ 
+}
+.movie-img{
+  height: 238rpx;
+  width: 175rpx;
+  position: absolute;
+  top: 160rpx;
+  right: 30rpx;
+}
+.summary{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40rpx 40rpx;
+  color:#777777;
+ margin-top: 40rpx;
+}
+.original-title{
+  color:#1f3463;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+}
+.mark{
+  margin-right: 30rpx;
+  white-space: nowrap;
+  color:#999999;
+}
+.hr{
+  margin-top: 100rpx;
+  margin-bottom: 40rpx;
+  height: 1px;
+  width: 100%;
+  background-color: #d9d9d9;
+}
+.synopsis{
+  margin-left:0;
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx 40rpx;
+  box-sizing: border-box;
+}
+.synopsis_title{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+  font-size: 26rpx;
+}
+.synopsis-font{
+  color:#999;
+}
+.summary-content{
+  margin-top: 20rpx;
+  line-height: 40rpx;
+  letter-spacing: 1px;
+}
+.cast{
+  padding: 40rpx 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.cast-font{
+  color:#999;
+  margin-bottom: 40rpx;
+  font-size: 26rpx;
+}
+.cast-container{
+  display: inline-flex;
+  flex-direction: column;
+  width: 170rpx;
+  text-align: center;
+  white-space: normal;
+  margin-right: 10rpx;
+}
+.cast-imgs{
+  white-space: nowrap;
+  
+}
+.cast-img{
+  width: 170rpx;
+  height: 210rpx;
+
+}
+.cast-name{
+  margin: 10rpx auto 0;
+}

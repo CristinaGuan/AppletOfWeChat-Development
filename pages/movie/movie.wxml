@@ -1,0 +1,30 @@
+<!--pages/movie/movie.wxml-->
+<import src="./movie-list/movie-list-tpl.wxml" />
+<import src="./more-movie/movie-grid/movie-grid-tpl.wxml"/>
+<!-- 电影搜索 -->
+<view class='search'>
+  <icon type='search' class='search-img' size="13" color='#405f80'></icon>
+  <input type='text' placeholder='红海行动、唐人街探案2...' placeholder-class='placeholder' bindfocus='onBindFocus' bindconfirm='onBindConfirm' value='{{inputValue}}'/>
+  <image wx:if="{{searchPanelShow}}" src='/images/icon/wx_app_xx.png' class='xx-img' catchtap='onCancelImgTap'></image>
+</view>
+<!-- 搜索结束 -->
+<view class='container' wx:if="{{containerShow}}">
+<!-- 正在热映 -->
+   <view class='movies-template'>
+     <template is="movieListTpl" data="{{...inTheaters}}"/>
+  </view> 
+<!-- 即将上映 -->
+   <view class='movies-template'>
+     <template is="movieListTpl" data="{{...comingSoon}}"/>
+  </view> 
+<!-- TOP250经典电影排行 -->
+   <view class='movies-template'>
+     <template is="movieListTpl" data="{{...top250}}"/>
+  </view> 
+  </view>
+ <!-- 分类结束 -->
+
+<!-- 搜索结果显示 -->
+ <view class='search-panel' wx:if="{{searchPanelShow}}">
+   <template is="movieGridTpl" data="{{...searchResult}}"/>
+ </view>

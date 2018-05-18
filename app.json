@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/index/index",
+    "pages/post/post",
+    "pages/logs/logs",
+    "pages/post/post-detail/post-detail",
+    "pages/post/post-comment/post-comment",
+    "pages/movie/movie",
+    "pages/movie/more-movie/more-movie",
+    "pages/movie/movie-detail/movie-detail",
+    "pages/setting/setting",
+    "pages/setting/device/device"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3C832A",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#3C832A"
+  },
+  "tabBar":{
+    "borderStyle":"black",
+    "selectColor":"#3C832A",
+    "color":"#333",
+    "backgroundColor": "#fff",
+    "position":"bottom",
+    "list":[
+      {
+        "pagePath":"pages/post/post",
+        "text":"专题",
+        "iconPath":"images/icon/wx_app_news.png",
+        "selectedIconPath":"images/icon/wx_app_news@HL.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "images/icon/wx_app_movie.png",
+        "selectedIconPath": "images/icon/wx_app_movie@HL.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "images/icon/wx_app_setting.png",
+        "selectedIconPath": "images/icon/wx_app_setting@HL.png"
+      }
+    ]
+  },
+
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  }
+
+}

@@ -1,0 +1,12 @@
+<!--pages/start/start.wxml-->
+<view class='container'>
+<swiper class='swiperClass' indicator-dots="true">
+  <block wx:for="{{swiperItemImgs}}" wx:for-item="item" wx:key="item" wx:for-index="index"> 
+     <swiper-item class="swiper-items">
+       <image class='swiper-image' src='{{item}}'></image>
+       <button class='swiper-button' wx:if="{{index==swiperItemImgs.length-1}}" bindtap="startNow">立即体验</button>
+     </swiper-item>
+  </block>
+ 
+</swiper>
+</view>

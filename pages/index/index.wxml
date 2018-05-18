@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">hello,{{userInfo.nickName}}</text>
+    <view class="usermotto">
+    <button class='startBtn' catchtap='onTapJump'>开启小程序之旅</button>
+  </view>
+    </block>
+  </view>
+  
+</view>

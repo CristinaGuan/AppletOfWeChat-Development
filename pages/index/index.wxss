@@ -1,0 +1,37 @@
+/**index.wxss**/
+.container{
+
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx; 
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #000;
+  font-family: "MicsoftYaHei";
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.usermotto {
+text-align: center;
+  margin-top: 200rpx;
+}
+.user-motto{
+ color: #000;
+}
+.startBtn{
+  margin-top: 20px;
+  font-size: 24rpx;
+  background-color: lightgreen;
+}

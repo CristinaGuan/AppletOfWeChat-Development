@@ -1,0 +1,63 @@
+<view class="container">
+<!-- 用户信息 -->
+  <view class="category-item personal-info">
+    <view class="user-avatar">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="user-name">
+      <view class="user-nickname">
+        <text>{{userInfo.nickName}}</text>
+      </view>
+      <view class="user-locaiton">
+        <text>所在地：{{userInfo.city}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 缓存面板 -->
+  <view class="category-item">
+    <block wx:for="{{cache}}" wx:item="item" wx:key="idx">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- 设备面板 -->
+  <view class="category-item">
+    <block wx:for="{{device}}" wx:item="item" wx:key="idx">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- API面板 -->
+  <view class="category-item">
+    <block wx:for="{{api}}" wx:item="item" wx:key="idx">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- 其他杂项面板 -->
+  <view class="category-item">
+    <block wx:for="{{others}}" wx:item="item" wx:key="idx">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+ <modal title="指南针" confirm-text="确定" no-cancel hidden="{{compassHidden}}" bindconfirm="hideCompass" confirm-color="#1F4BA5">
+    当前方向：偏北{{compassVal}}°
+  </modal>  
+  <!-- 摇一摇 -->
+   <modal title="摇一摇" confirm-text="确定" no-cancel hidden="{{shakeInfo.gravityModalHidden}}" bindconfirm="gravityModalConfirm" confirm-color="#1F4BA5">
+    当前摇一摇次数：{{shakeInfo.num}}
+  </modal> 
+</view>

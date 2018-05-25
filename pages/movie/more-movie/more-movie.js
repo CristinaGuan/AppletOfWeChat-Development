@@ -21,13 +21,13 @@ Page({
     var dataUrl="";
     switch(category){
         case "正在热映":
-        dataUrl ="http://172.16.14.238:8089/theaters";
+        dataUrl = app.globalData.doubanBase+"/theaters";
           break;
         case "即将上映":
-        dataUrl = "http://172.16.14.238:8089/comingSoon";
+        dataUrl = app.globalData.doubanBase+ "/comingSoon";
           break;
         case "豆瓣Top250":
-        dataUrl = "http://172.16.14.238:8089/top250";
+        dataUrl = app.globalData.doubanBase+ "/top250";
           break;
     }
     this.data.requestUrl=dataUrl;

@@ -23,9 +23,10 @@ Page({
    */
   onLoad: function (options) {
 
-    var inTheatersUrl = "http://172.16.14.238:8089/theaters" + "?start=0&count=3";
-    var comingSoonUrl = "http://172.16.14.238:8089/comingSoon" + "?start=0&count=3";
-    var top250Url = "http://172.16.14.238:8089/top250" + "?start=0&count=3";
+    var inTheatersUrl = app.globalData.doubanBase +"/theaters" + "?start=0&count=3";
+    console.log(inTheatersUrl);
+    var comingSoonUrl = app.globalData.doubanBase+"/comingSoon" + "?start=0&count=3";
+    var top250Url = app.globalData.doubanBase+ "/top250" + "?start=0&count=3";
    
     this.getMovieListData(inTheatersUrl,"inTheaters","正在热映");
     this.getMovieListData(comingSoonUrl, "comingSoon", "即将上映");
@@ -78,7 +79,7 @@ Page({
        var totalCount = this.data.searchResult.movies.length;
       //  console.log(totalCount);
        //拼接下一组数据的Url
-       var nextUrl = "http://172.16.14.238:8089/search" + "?q="+this.data.keyWord+ "&start=" + totalCount;
+       var nextUrl = app.globalData.doubanBase+ "/search" + "?q="+this.data.keyWord+ "&start=" + totalCount;
       // console.log(nextUrl);
       util.http(nextUrl, this.processDouBanData_search);
       wx.showNavigationBarLoading();
@@ -216,7 +217,7 @@ Page({
   //当输入完成后按回车或手机键盘确认键会触发onBindConfirm
   onBindConfirm:function(event){
      this.data.keyWord=event.detail.value;
-     var searchUrl = "http://172.16.14.238:8089/search" + "?q=" + this.data.keyWord;
+     var searchUrl = app.globalData.doubanBase+ "/search" + "?q=" + this.data.keyWord;
      this.getMovieListData(searchUrl,"searchResult","");
      
   },

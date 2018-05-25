@@ -84,6 +84,7 @@ App({
   
   globalData: {
     userInfo: null,
-    doubanBase:"https://api.douban.com",
+    // doubanBase:"https://api.douban.com",
+    doubanBase:"https://api.qlgy.shop"
   }
 })

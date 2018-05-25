@@ -1,6 +1,6 @@
 // pages/movie/movie-detail/movie-detail.js
 var util=require('../../../util/util.js');
-
+var app = getApp();
 Page({
 
   /**
@@ -15,7 +15,7 @@ Page({
    */
   onLoad: function (options) {
      var movieId=options.id;
-     var url ='http://172.16.14.238:8089/movie_subject/'+movieId;
+     var url = app.globalData.doubanBase+'/movie_subject/'+movieId;
      util.http(url,this.processDoubanData);
   },
 
